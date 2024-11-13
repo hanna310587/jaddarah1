@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaddarah Professional Services Limited</title>
+    <style>
+        /* General styling */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; display: flex; flex-direction: column; align-items: center; }
+        
+        /* Header styling */
+        header {
+            width: 100%;
+            background-color: #1E90FF; /* Blue background */
+            color: #FFD700; /* Yellow text */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            cursor: pointer;
+            cursor: pointer;
+            font-size: 1.2em;
+            font-weight: bold;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* Logo spinning */
+        .logo { width: 50px; height: 50px; animation: spin 10s linear infinite; }
+        @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+        /* Scrolling text animation */
+        .scrolling-text {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            animation: scroll-left 10s linear infinite;
+        }
+        @keyframes scroll-left { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
+
+        /* Navigation styling */
+        nav { margin-top: 10px; }
+        nav a {
+            color: #FFD700;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Section styling */
+        section { padding: 20px; max-width: 800px; width: 100%; display: none; margin-top: 80px; }
+
+        /* Footer styling */
+        footer {
+            width: 100%;
+            background-color: #1E90FF;
+            color: #FFD700;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+        }
+
+        .apply-btn {
+            background-color: #FFD700;
+            color: #1E90FF;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        /* Home Page cycling effect */
+        .section-box { padding: 20px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; }
+
+        .welcome { background-color: #b3e6ff; }
+        .whoweare { background-color: #ccf2ff; }
+        .best { background-color: #e6f7ff; }
+
+        /* Jobs Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            header, footer { font-size: 0.9em; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="scrolling-text">Jaddarah Professional Services Limited - Your Recruitment Partner</div>
+        <img src="jps logo.png" alt="Logo" class="logo">
+        <nav>
+            <a onclick="showPage('home')">Home</a>
+            <a onclick="showPage('services')">Our Services</a>
+            <a onclick="showPage('jobs')">Jobs Available</a>
+            <a onclick="showPage('contact')">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="section-box welcome" style="display: block;">
+            <h2>Welcome to Jaddarah Professional Services Limited</h2>
+            <p>Welcome! Jaddarah Professional Services is here to connect professionals with excellent job opportunities worldwide.</p>
+            <p>Jaddarah Professional Services Limited is a dedicated and innovative recruitment agency focused on bridging the gap
+                 between job seekers and reputable employers worldwide. Established to provide exceptional recruitment solutions,
+                  we are committed to empowering individuals with meaningful employment while helping businesses thrive through access 
+                  to qualified, skilled professionals.</p>
+            <P>Our services span across several key areas, including recruitment, visa assistance, document preparation, and pre-departure guidance, 
+                making the hiring and placement process streamlined and reliable for both employers and candidates.</P>
+        </div>
+        <div class="section-box whoweare" style="display: none;">
+            <h2>Who We Are</h2>
+            <p>We are a recruitment agency committed to providing the highest quality services to job seekers and employers.</p>
+        </div>
+        <div class="section-box best" style="display: none;">
+            <h2>Why We Are the Best</h2>
+            <p>Our extensive industry expertise, attention to detail, and commitment to client satisfaction make us a leading choice in recruitment services.</p>
+            <p>Commitment to Quality: At Jaddarah, we prioritize excellence in every aspect of our services, from recruitment to post-placement support. 
+                We work with the highest standards to ensure that every candidate and client experience is seamless, professional, and fulfilling.</p>
+            <p>Experienced and Dedicated Team: Our team of professionals brings years of experience in recruitment, immigration support, and client relations.
+                 Their expertise, combined with a passion for helping others, means we provide customized, reliable solutions to meet every unique requirement.</p>
+            <P>Comprehensive Services: Jaddarah offers end-to-end recruitment services, including job matching, visa processing, document preparation, 
+                and pre-departure guidance. Our holistic approach simplifies the hiring and relocation process, ensuring clients and candidates have a 
+                stress-free experience.</P>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" style="display: none;">
+        <h2>Our Services</h2>
+        <div class="section-box">
+            <h3>Recruitment</h3>
+            <p>We actively seek qualified candidates to fill open positions with our partner companies worldwide.</p>
+            <p>Leveraging our extensive network, we connect talented individuals to suitable job opportunities, providing the guidance they need for career growth.</p>
+        </div>
+        <div class="section-box">
+            <h3>Visa Application</h3>
+            <p>Our team assists candidates with all stages of the visa application process.</p>
+            <p>We specialize in assisting clients with a wide range of visa applications, ensuring a smooth and efficient process tailored to meet each individual’s needs.</p>
+        </div>
+        <div class="section-box">
+            <h3>Flight Booking</h3>
+            <p>We provide convenient flight booking services to make travel arrangements smoother for candidates.</p>
+            <p>With access to a vast inventory of flights, we offer comprehensive flight booking and ticketing services for hassle-free travel planning.</p>
+        </div>
+        <div class="section-box">
+            <h3>Other Services</h3>
+            <ul>
+                <li>Interview Preparation</li>
+                <li>CV Customization</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Jobs Section -->
+    <section id="jobs" style="display: none;">
+        <h2>Available Jobs</h2>
+        <table>
+            <tr>
+                <th>Country</th>
+                <th>Job Available</th>
+                <th>Salary</th>
+                <th>Apply</th>
+            </tr>
+            <tr>
+                <td>Dubai</td>
+                <td>Cleaner</td>
+                <td>1200 AED</td>
+                <td><a href="https://forms.gle/4PdoS3WhtZ97g2Si9" class="apply-btn">Apply Here</a></td>
+            </tr>
+            <tr>
+                <th>Country</th>
+                <th>Job Available</th>
+                <th>Salary</th>
+                <th>Apply</th>
+            </tr>
+            <tr>
+                <td>Romania</td>
+                <td>Cleaner</td>
+                <td>400 Euros</td>
+                <td><a href="https://forms.gle/4PdoS3WhtZ97g2Si9" class="apply-btn">Apply Here</a></td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" style="display: none;">
+        <h2>Contact Us</h2>
+        <p>Email: info@jaddarahservices.com</p>
+        <p>Location: Nairobi, Kenya</p>
+        <h3>Job Adverts</h3>
+        <img src="visit us today.jpg" alt="Advert Poster" style="width: 100%; max-width: 300px;">
+        <p><a href="https://google.com" class="apply-btn">Apply Here</a></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p><a href="https://forms.gle/4PdoS3WhtZ97g2Si9" class="apply-btn">Press Here to Join Us Today</a></p>
+    </footer>
+
+    <!-- JavaScript for Navigation and Text Cycling -->
+    <script>
+        function showPage(pageId) {
+            var sections = document.querySelectorAll("section");
+            sections.forEach(function (section) {
+                section.style.display = "none";
+            });
+            document.getElementById(pageId).style.display = "block";
+        }
+
+        // Text cycling in the Home page
+        let homeSections = document.querySelectorAll("#home > .section-box");
+        let currentIndex = 0;
+        setInterval(function() {
+            homeSections.forEach((section, index) => {
+                section.style.display = index === currentIndex ? "block" : "none";
+            });
+            currentIndex = (currentIndex + 1) % homeSections.length;
+        }, 3000);
+    </script>
+
+</body>
+</html>
